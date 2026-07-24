@@ -1857,6 +1857,10 @@ namespace gdjs {
         runtimeObject.setLayer(newInstance.layer);
         somethingChanged = true;
       }
+      if (!oldInstance.hidden !== !newInstance.hidden) {
+        runtimeObject.hide(!!newInstance.hidden);
+        somethingChanged = true;
+      }
       if (gdjs.Base3DHandler && gdjs.Base3DHandler.is3D(runtimeObject)) {
         if (oldInstance.z !== newInstance.z) {
           runtimeObject.setZ(newInstance.z || 0);

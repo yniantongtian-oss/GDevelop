@@ -379,6 +379,9 @@ namespace gdjs {
 
           newObject.setZOrder(instanceData.zOrder);
           newObject.setLayer(instanceData.layer);
+          if (instanceData.hidden) {
+            newObject.hide(true);
+          }
           newObject
             .getVariables()
             .initFrom(instanceData.initialVariables, true);

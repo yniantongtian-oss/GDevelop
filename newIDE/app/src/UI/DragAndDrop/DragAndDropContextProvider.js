@@ -12,6 +12,9 @@ const touchBackendOptions = {
   // events (fired after touch events) can trigger drags with no delay,
   // making dragging feel instant on Android.
   enableMouseEvents: true,
+  // Android Chrome's long-press synthesizes hover mouse events ~1px off the
+  // touch position - without a slop, every long press starts a phantom drag.
+  touchSlop: 10,
 };
 
 type Props = {|

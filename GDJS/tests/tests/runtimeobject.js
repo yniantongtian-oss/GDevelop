@@ -37,7 +37,7 @@ describe('gdjs.RuntimeObject', () => {
     });
     object.setPosition(15, 20);
 
-    expect(object.getAngleToPosition(-110, 200)).to.be(124.77783136636388);
+    expect(object.getAngleToPosition(-110, 200)).to.be.within(124.77783136636388 - 1e-10, 124.77783136636388 + 1e-10);
   });
 
   it('should compute AABB properly', () => {

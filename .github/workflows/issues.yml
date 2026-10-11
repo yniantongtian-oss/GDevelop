@@ -5,7 +5,7 @@ on:
 jobs:
   autocomment:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.body, 'The node to be removed is not a child of this node')
+    if: ${{ (github.repository == '4ian/GDevelop') && (contains(github.event.issue.body, 'The node to be removed is not a child of this node')) }}
     steps:
       - name: Autocomment indications on bug if it looks like #3453
         uses: peter-evans/create-or-update-comment@v3

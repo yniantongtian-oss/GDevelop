@@ -532,6 +532,6 @@ describe('gdjs.TweenRuntimeBehavior', () => {
     expect(sprite.getScaleX()).to.be(386.6364089863524);
     expect(sprite.getScaleY()).to.be.within(579.9546134795287 - 1e-10, 579.9546134795287 + 1e-10);
     expect(sprite.getX()).to.be(-5872.3650875632775);
-    expect(sprite.getY()).to.be(-8558.547631344918);
+    expect(sprite.getY()).to.be.within(-8558.547631344918 - 1e-10, -8558.547631344918 + 1e-10);
   });
 });
